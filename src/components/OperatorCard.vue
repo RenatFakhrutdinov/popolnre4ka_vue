@@ -1,9 +1,10 @@
 <template>
     <div>
         <h2>{{operatorLabel}}</h2>
+        <img :src="require(`@/assets/${pictPath}`)">
         <p>{{pictPath}}</p>
     </div>
-</template>
+</template>M
 
 <script>
     export default {

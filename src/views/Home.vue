@@ -5,15 +5,15 @@
         <div class="row">
             <OperatorCard
                     operator-label="MTC"
-                    pict-path="hdhhd"
+                    pict-path="mts.png"
             />
             <OperatorCard
-                    operator-label="MTC"
-                    pict-path="hdhhd"
+                    operator-label="МегаФон"
+                    pict-path="megafon.png"
             />
             <OperatorCard
-                    operator-label="MTC"
-                    pict-path="hdhhd"
+                    operator-label="Билайн"
+                    pict-path="beeline.png"
             />
         </div>
     </div>
