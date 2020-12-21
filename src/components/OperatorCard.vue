@@ -6,13 +6,16 @@
 </template>M
 
 <script>
+    import router from "@/router";
+
     export default {
         name: "OperatorCard",
-        props: ['operatorLabel', 'pictPath'],
+        props: ['operatorLabel', 'pictPath', 'route'],
         template: '<h2>{{operatorLabel}}</h2>',
         methods: {
             clickMethod() {
                 console.log(this.operatorLabel)
+                router.push({path: "/operator", query: {testProp: this.operatorLabel}, params: {testProp: "feef"}})
             }
         }
     }

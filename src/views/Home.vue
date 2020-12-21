@@ -6,14 +6,17 @@
             <OperatorCard
                     operator-label="MTC"
                     pict-path="mts.png"
+                    route="mts"
             />
             <OperatorCard
                     operator-label="МегаФон"
                     pict-path="megafon.png"
+                    route="megafon"
             />
             <OperatorCard
                     operator-label="Билайн"
                     pict-path="beeline.png"
+                    route="beeline"
             />
         </div>
     </div>
