@@ -1,8 +1,7 @@
 <template>
-    <div>
+    <div @click="clickMethod">
         <h2>{{operatorLabel}}</h2>
         <img :src="require(`@/assets/${pictPath}`)">
-        <p>{{pictPath}}</p>
     </div>
 </template>M
 
@@ -10,7 +9,12 @@
     export default {
         name: "OperatorCard",
         props: ['operatorLabel', 'pictPath'],
-        template: '<h2>{{operatorLabel}}</h2>'
+        template: '<h2>{{operatorLabel}}</h2>',
+        methods: {
+            clickMethod() {
+                console.log(this.operatorLabel)
+            }
+        }
     }
 </script>
 
