@@ -16,21 +16,24 @@ export default new Router({
             path: "/mts",
             component: PayPage,
             props: {
-                operatorLabel: "МТС"
+                operatorLabel: "МТС",
+                pictPath: "mts.png"
             }
         },
         {
             path: "/megafon",
             component: PayPage,
             props: {
-                operatorLabel: "МегаФон"
+                operatorLabel: "МегаФон",
+                pictPath: "megafon.png"
             }
         },
         {
             path: "/beeline",
             component: PayPage,
             props: {
-                operatorLabel: "Билайн"
+                operatorLabel: "Билайн",
+                pictPath: "beeline.png"
             }
         },
     ]
