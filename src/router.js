@@ -13,10 +13,24 @@ export default new Router({
             component: Home
         },
         {
-            path: "/operator",
+            path: "/mts",
             component: PayPage,
             props: {
-                testProp: "de"
+                operatorLabel: "МТС"
+            }
+        },
+        {
+            path: "/megafon",
+            component: PayPage,
+            props: {
+                operatorLabel: "МегаФон"
+            }
+        },
+        {
+            path: "/beeline",
+            component: PayPage,
+            props: {
+                operatorLabel: "Билайн"
             }
         },
     ]

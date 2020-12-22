@@ -1,19 +1,14 @@
 <template>
     <div>
-        <h2 @click="testClick">testProp}}</h2>
-        <p>{{testProp}}</p>
+        <h2>{{operatorLabel}}</h2>
+        <p>{{operatorLabel}}</p>
     </div>
 </template>
 
 <script>
     export default {
         name: "PayPage",
-        props: ['testProp'],
-        methods: {
-            testClick() {
-                console.log(this.testProp)
-            }
-        }
+        props: ['operatorLabel'],
     }
 </script>
 
