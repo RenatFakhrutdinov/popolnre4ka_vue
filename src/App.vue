@@ -59,7 +59,7 @@ export default {
   }
 
   .upperO {
-    font-size: 110px;
+    font-size: 60px;
     color: #FC5252;
     text-shadow: 4px 5px 5px #617D8B;
   }
