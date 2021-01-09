@@ -30,7 +30,9 @@ export default {
     -webkit-font-smoothing: antialiased;
     text-align: center;
     color: #2c3e50;
-    background-color: lightcyan;
+    background-color: #D2E9FC;
+    background-size: cover;
+    height: 100vh;
   }
 
   .centerRow {

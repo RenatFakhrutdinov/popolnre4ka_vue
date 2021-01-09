@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2>Home page</h2>
         <div class="row">
             <OperatorCard
                     operator-label="MTC"
@@ -31,13 +30,9 @@
 
 <style scoped>
     .row {
-
         display: flex;
-
         flex-direction: row;
-
         justify-content: flex-start;
-
         padding: 20px;
     }
 </style>
