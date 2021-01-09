@@ -17,19 +17,29 @@
                     route="beeline"
             />
             <OperatorCard
-                    operator-label="MTC"
-                    pict-path="mts.png"
-                    route="mts"
+                    operator-label="Tele2"
+                    pict-path="tele2.png"
+                    route="tele2"
             />
             <OperatorCard
-                    operator-label="МегаФон"
-                    pict-path="megafon.png"
-                    route="megafon"
+                    operator-label="Yota"
+                    pict-path="yota.png"
+                    route="yota"
             />
             <OperatorCard
-                    operator-label="Билайн"
-                    pict-path="beeline.png"
-                    route="beeline"
+                    operator-label="Ростелеком"
+                    pict-path="rostelecom.png"
+                    route="rostelecom"
+            />
+            <OperatorCard
+                    operator-label="Тинькофф Мобайл"
+                    pict-path="tinkoff.png"
+                    route="tinkoff"
+            />
+            <OperatorCard
+                    operator-label="СберМобайл"
+                    pict-path="sberbank.png"
+                    route="sber"
             />
         </div>
     </div>

@@ -36,5 +36,45 @@ export default new Router({
                 pictPath: "beeline.png"
             }
         },
+        {
+            path: "/tele2",
+            component: PayPage,
+            props: {
+                operatorLabel: "Tele2",
+                pictPath: "tele2.png"
+            }
+        },
+        {
+            path: "/yota",
+            component: PayPage,
+            props: {
+                operatorLabel: "Yota",
+                pictPath: "yota.png"
+            }
+        },
+        {
+            path: "/rostelecom",
+            component: PayPage,
+            props: {
+                operatorLabel: "Ростелеком",
+                pictPath: "rostelecom.png"
+            }
+        },
+        {
+            path: "/tinkoff",
+            component: PayPage,
+            props: {
+                operatorLabel: "Тинькофф Мобайл",
+                pictPath: "tinkoff.png"
+            }
+        },
+        {
+            path: "/sber",
+            component: PayPage,
+            props: {
+                operatorLabel: "СберМобайл",
+                pictPath: "sberbank.png"
+            }
+        },
     ]
 })
