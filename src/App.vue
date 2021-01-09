@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!--Logo-->
     <div class="centerRow">
       <p class="upperP">П</p>
       <p class="simpleO">о</p>
@@ -13,7 +14,16 @@
       <p class="yellowK">k</p>
       <p class="brownA">A</p>
     </div>
+    <!--Main content-->
     <router-view/>
+    <!--Spacers-->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!--Disclaimer-->
+    <p class="padding">Warning! This is not a real mobile payment terminal. Do not try to transfer money to us! This
+      site is designed just to test Flutter web. Hope you enjoy it =)</p>
   </div>
 </template>
 
@@ -33,6 +43,9 @@ export default {
     background-color: #D2E9FC;
     background-size: cover;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .centerRow {
@@ -97,5 +110,9 @@ export default {
   .brownA {
     font-size: 40px;
     color: #6D4C42;
+  }
+
+  .padding {
+    padding-inline: 16px;
   }
 </style>
