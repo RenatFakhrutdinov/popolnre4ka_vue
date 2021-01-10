@@ -15,7 +15,9 @@
       <p class="brownA">A</p>
     </div>
     <!--Main content-->
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
     <!--Spacers-->
     <div></div>
     <div></div>
@@ -115,5 +117,13 @@ export default {
 
   .padding {
     padding-inline: 16px;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .4s linear;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>
