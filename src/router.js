@@ -64,7 +64,7 @@ export default new Router({
             path: "/tinkoff",
             component: PayPage,
             props: {
-                operatorLabel: "Тинькофф Мобайл",
+                operatorLabel: "Тинькофф",
                 pictPath: "tinkoff.png"
             }
         },

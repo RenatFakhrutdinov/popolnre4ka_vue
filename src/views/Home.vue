@@ -32,7 +32,7 @@
                     route="rostelecom"
             />
             <OperatorCard
-                    operator-label="Тинькофф Мобайл"
+                    operator-label="Тинькофф"
                     pict-path="tinkoff.png"
                     route="tinkoff"
             />
