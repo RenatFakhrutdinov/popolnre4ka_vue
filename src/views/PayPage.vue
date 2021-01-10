@@ -1,15 +1,20 @@
 <template>
     <div class="payform">
         <div class="row">
-            <img :src="require(`@/assets/${pictPath}`)">
-            <p>{{operatorLabel}}</p>
+            <img style="padding-right: 16px" :src="require(`@/assets/${pictPath}`)" alt="">
+            <p style="font-size: 20px">{{operatorLabel}}</p>
         </div>
         <p>Номер телефон</p>
-        <input type="tel" placeholder="Введите Ваш номер телефона">
+        <label>
+            <input type="tel" placeholder="Введите Ваш номер телефона">
+        </label>
         <p>Сумма в рублях</p>
-        <input type="number" placeholder="Введите сумму в рублях">
+        <label>
+            <input type="number" placeholder="Введите сумму в рублях">
+        </label>
         <div class="row">
             <button @click="backClick">На главную</button>
+            <div style="width: 32px"/>
             <button @click="payClick">Оплатить</button>
         </div>
     </div>
@@ -65,4 +70,14 @@
     input:focus {
         border: 2px solid dodgerblue;
     }
+
+    button {
+        margin-top: 16px;
+        padding-inline: 24px;
+        padding-block: 8px;
+        border: none;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
 </style>
