@@ -6,11 +6,12 @@
         </div>
         <p>Номер телефон</p>
         <label>
-            <input type="tel" placeholder="Введите Ваш номер телефона">
+            <input type="tel" v-mask="'+7(###) ###-##-##'" v-model="phoneNumber"
+                   placeholder="Введите Ваш номер телефона">
         </label>
         <p>Сумма в рублях</p>
         <label>
-            <input type="number" placeholder="Введите сумму в рублях">
+            <input type="tel" v-mask="'### рублей'" v-model="depositAmount" placeholder="Введите сумму в рублях">
         </label>
         <div class="row">
             <button @click="backClick">На главную</button>
@@ -33,7 +34,11 @@
             payClick() {
                 console.log('payclick')
             }
-        }
+        },
+        data: () => ({
+            phoneNumber: '',
+            depositAmount: ''
+        })
     }
 </script>
 
