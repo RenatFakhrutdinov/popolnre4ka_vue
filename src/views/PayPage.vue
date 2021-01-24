@@ -4,6 +4,7 @@
             <img style="padding-right: 16px" :src="require(`@/assets/${pictPath}`)" alt="">
             <p style="font-size: 20px">{{operatorLabel}}</p>
         </div>
+        <ProgressBar/>
         <p>Номер телефон</p>
         <label>
             <input type="tel" v-mask="'+7(###) ###-##-##'" v-model="phoneNumber"
@@ -23,9 +24,11 @@
 
 <script>
     import router from "@/router";
+    import ProgressBar from "@/components/ProgressBar";
 
     export default {
         name: "PayPage",
+        components: {ProgressBar},
         props: ['operatorLabel', 'pictPath'],
         methods: {
             backClick() {
