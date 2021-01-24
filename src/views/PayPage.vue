@@ -5,43 +5,18 @@
             <p style="font-size: 20px">{{operatorLabel}}</p>
         </div>
         <ProgressBar/>
-        <p>Номер телефон</p>
-        <label>
-            <input type="tel" v-mask="'+7(###) ###-##-##'" v-model="phoneNumber"
-                   placeholder="Введите Ваш номер телефона">
-        </label>
-        <p>Сумма в рублях</p>
-        <label>
-            <input type="tel" v-mask="'### рублей'" v-model="depositAmount" placeholder="Введите сумму в рублях">
-        </label>
-        <div class="row">
-            <button @click="backClick">На главную</button>
-            <div style="width: 32px"/>
-            <button @click="payClick">Оплатить</button>
-        </div>
+        <InputForm/>
     </div>
 </template>
 
 <script>
-    import router from "@/router";
     import ProgressBar from "@/components/ProgressBar";
+    import InputForm from "@/components/InputForm";
 
     export default {
         name: "PayPage",
-        components: {ProgressBar},
+        components: {InputForm, ProgressBar},
         props: ['operatorLabel', 'pictPath'],
-        methods: {
-            backClick() {
-                router.back()
-            },
-            payClick() {
-                console.log('payclick')
-            }
-        },
-        data: () => ({
-            phoneNumber: '',
-            depositAmount: ''
-        })
     }
 </script>
 
@@ -64,28 +39,4 @@
         justify-content: center;
         align-items: center;
     }
-
-    input {
-        width: 100%;
-        box-sizing: border-box;
-        border-color: gray;
-        border-style: solid;
-        border-radius: 4px;
-        border-width: 1px;
-        padding: 16px;
-    }
-
-    input:focus {
-        border: 2px solid dodgerblue;
-    }
-
-    button {
-        margin-top: 16px;
-        padding-inline: 24px;
-        padding-block: 8px;
-        border: none;
-        width: 100%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    }
-
 </style>
