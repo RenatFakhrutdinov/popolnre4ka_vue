@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p class="errorText">{{errorText}}</p>
         <p class="padding">Номер телефон</p>
         <label>
             <input type="tel" v-mask="'+7(###) ###-##-##'" v-model="phoneNumber"
@@ -28,10 +29,17 @@
                 router.back()
             },
             payClick() {
-                this.$emit("pay-click")
+                if (this.phoneNumber.length < 17) {
+                    this.errorText = "Укажите правильный номер телефона"
+                } else if (this.depositAmount.length === 0) {
+                    this.errorText = "Укажите сумму платежа"
+                } else {
+                    this.$emit("pay-click")
+                }
             }
         },
         data: () => ({
+            errorText: '',
             phoneNumber: '',
             depositAmount: ''
         })
@@ -39,6 +47,10 @@
 </script>
 
 <style scoped>
+    .errorText {
+        color: #B71C1C;
+    }
+
     .padding {
         padding-top: 20px;
     }
