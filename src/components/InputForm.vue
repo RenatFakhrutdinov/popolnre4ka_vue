@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Номер телефон</p>
+        <p class="padding">Номер телефон</p>
         <label>
             <input type="tel" v-mask="'+7(###) ###-##-##'" v-model="phoneNumber"
                    placeholder="Введите Ваш номер телефона">
@@ -28,7 +28,7 @@
                 router.back()
             },
             payClick() {
-                console.log('payclick')
+                this.$emit("pay-click")
             }
         },
         data: () => ({
@@ -39,6 +39,10 @@
 </script>
 
 <style scoped>
+    .padding {
+        padding-top: 20px;
+    }
+
     .payform {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         transition: 0.3s;

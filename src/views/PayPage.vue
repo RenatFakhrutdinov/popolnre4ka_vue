@@ -4,8 +4,10 @@
             <img style="padding-right: 16px" :src="require(`@/assets/${pictPath}`)" alt="">
             <p style="font-size: 20px">{{operatorLabel}}</p>
         </div>
-        <ProgressBar/>
-        <InputForm/>
+        <ProgressBar v-if="loading"/>
+        <InputForm
+                @pay-click="payClick"
+        />
     </div>
 </template>
 
@@ -15,8 +17,21 @@
 
     export default {
         name: "PayPage",
+        data() {
+            return {
+                loading: false,
+            }
+        },
         components: {InputForm, ProgressBar},
         props: ['operatorLabel', 'pictPath'],
+        methods: {
+            payClick() {
+                this.loading = true
+                setTimeout(() =>
+                        this.loading = false
+                    , 1500);
+            }
+        }
     }
 </script>
 
