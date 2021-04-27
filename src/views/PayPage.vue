@@ -27,9 +27,17 @@
         methods: {
             payClick() {
                 this.loading = true
-                setTimeout(() =>
-                        this.loading = false
-                    , 1500);
+                setTimeout(() => this.getPayback(), 1500);
+            },
+            getPayback() {
+                this.loading = false
+                let randomIndex = Math.random();
+                if (randomIndex > 0.7) {
+                    // navigate to fail screen
+                } else {
+                    // navigate to success screen
+                }
+
             }
         }
     }

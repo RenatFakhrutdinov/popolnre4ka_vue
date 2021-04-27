@@ -34,6 +34,7 @@
                 } else if (this.depositAmount.length === 0) {
                     this.errorText = "Укажите сумму платежа"
                 } else {
+                    this.errorText = ""
                     this.$emit("pay-click")
                 }
             }
