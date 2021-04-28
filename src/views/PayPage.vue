@@ -14,12 +14,14 @@
 <script>
     import ProgressBar from "@/components/ProgressBar";
     import InputForm from "@/components/InputForm";
+    import router from "@/router";
 
     export default {
         name: "PayPage",
         data() {
             return {
                 loading: false,
+                randomIndex: 0,
             }
         },
         components: {InputForm, ProgressBar},
@@ -31,11 +33,11 @@
             },
             getPayback() {
                 this.loading = false
-                let randomIndex = Math.random();
-                if (randomIndex > 0.7) {
-                    // navigate to fail screen
+                this.randomIndex = Math.random();
+                if (this.randomIndex > 0.7) {
+                    router.push({path: "/error"})
                 } else {
-                    // navigate to success screen
+                    router.push({path: "/success"})
                 }
 
             }

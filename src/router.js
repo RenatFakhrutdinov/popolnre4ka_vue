@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import PayPage from "@/views/PayPage";
+import ResultPage from "@/views/ResultPage";
 
 Vue.use(Router)
 
@@ -74,6 +75,20 @@ export default new Router({
             props: {
                 operatorLabel: "СберМобайл",
                 pictPath: "sberbank.png"
+            }
+        },
+        {
+            path: "/error",
+            component: ResultPage,
+            props: {
+                pictPath: "close.png"
+            }
+        },
+        {
+            path: "/success",
+            component: ResultPage,
+            props: {
+                pictPath: "tick.png"
             }
         },
     ]
