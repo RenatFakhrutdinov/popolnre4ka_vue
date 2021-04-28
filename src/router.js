@@ -81,14 +81,16 @@ export default new Router({
             path: "/error",
             component: ResultPage,
             props: {
-                pictPath: "close.png"
+                pictPath: "close.png",
+                message: "Не удалось выполнить платёж"
             }
         },
         {
             path: "/success",
             component: ResultPage,
             props: {
-                pictPath: "tick.png"
+                pictPath: "tick.png",
+                message: "Платёж успешно выполнен"
             }
         },
     ]
