@@ -18,11 +18,6 @@
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
-    <!--Spacers-->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
     <!--Disclaimer-->
     <p class="padding">Warning! This is not a real mobile payment terminal. Do not try to transfer money to us! This
       site is designed just to test Flutter web. Hope you enjoy it =)</p>
@@ -53,7 +48,6 @@ export default {
 
   .centerRow {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: baseline;
   }
@@ -116,6 +110,7 @@ export default {
   }
 
   .padding {
+    padding-top: 40px;
     padding-inline: 16px;
   }
 
